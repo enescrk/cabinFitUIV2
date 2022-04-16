@@ -1,0 +1,46 @@
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . bigTitle bigTitle . ."
+        "img img . text text text"
+        "img img . text text text"
+        ". . . . btn btn"
+    ;
+
+    >.bigTitle {
+        grid-area: bigTitle;
+        border: 5px solid #6DCCDC;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        border-radius: 10px;
+        > span {
+            color: #6DCCDC;
+            font-size: 20px;
+            font-weight: 900;
+        }
+        > .whiteColor {
+            color: white;
+        }
+    }
+
+    > img {
+        grid-area: img;
+        width: 100%;
+    }
+
+    >p {
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        color: white;
+        text-align: center;
+    }
+
+    > .customBtn{
+        grid-area: btn;
+    }
+}
