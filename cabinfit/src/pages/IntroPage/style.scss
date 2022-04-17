@@ -44,3 +44,61 @@ section {
         grid-area: btn;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 20vh 20vh 20vh;
+        grid-template-areas:
+            "bigTitle"
+            "img"
+            "text"
+            "btn"
+        ;
+        gap: 20px;
+        
+        >.bigTitle {
+            grid-area: bigTitle;
+            border: 5px solid #6DCCDC;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            line-height: 15px;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: 25%;
+            padding: 5px;
+            align-self: center;
+            > span {
+                color: #6DCCDC;
+                font-size: 14px;
+                font-weight: 900;
+            }
+            > .whiteColor {
+                color: white;
+            }
+        }
+    
+        > img {
+            grid-area: img;
+            width: 80%;
+            margin-left: 10%;
+            height: auto;
+            max-height: 100%;
+        }
+    
+        >p {
+            grid-area: text;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            color: white;
+            text-align: center;
+        }
+    
+        > .customBtn{
+            grid-area: btn;
+        }
+    }
+  }

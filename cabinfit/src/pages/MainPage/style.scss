@@ -16,7 +16,30 @@ header {
             background-color: transparent;
             border: none;
             color: white;
+
+            >svg {
+                fill: white;
+            }
+
+            >svg:hover {
+                background-color: white;
+                fill: #0B67BF;
+                border-radius: 60%;
+                animation-name: closeBorder;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
         }
+    }
+}
+
+@keyframes closeBorder {
+    from {
+        padding: none;
+    }
+
+    to {
+        padding: 5px;
     }
 }
 
