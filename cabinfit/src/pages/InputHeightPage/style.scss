@@ -1,0 +1,80 @@
+.heightPage {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 40px 400px 80px 50px;
+    grid-template-areas:
+        "title title title title"
+        "main main main main"
+        ". subText subText ."
+        ". . . btn"
+    ;
+}
+
+.heightMainContent {
+    grid-area: main;
+    display: grid;
+    grid-column: 30% 20% 20% 30%;
+    grid-template-rows: 45vh;
+    grid-template-areas:
+        ". img input ."
+    ;
+
+    >img {
+        grid-area: img;
+        width: 35%;
+
+    }
+
+    >.input {
+        grid-area: input;
+    }
+}
+
+.btn {
+    grid-area: btn;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subText{
+    grid-area: subText;
+}
+
+@media only screen and (max-width: 600px) {
+    .heightPage {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 5vh 20vh 45vh 20vh;
+        grid-template-areas:
+            "title"
+            "subText"
+            "main"
+            "btn"
+        ;
+    }
+
+    .heightMainContent {
+        grid-area: main;
+        display: grid;
+        grid-column: 1fr;
+        grid-template-rows: 15vh 25vh;
+        grid-template-areas:
+            "img"
+            "input"
+        ;
+        gap: 10px;
+
+        >img {
+            grid-area: img;
+            height: 100%;
+            width: auto;
+    
+        }
+    }
+
+
+}

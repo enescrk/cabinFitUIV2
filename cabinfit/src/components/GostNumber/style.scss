@@ -1,0 +1,36 @@
+span {
+    font-size: 40px;
+    color: white;
+    font-weight: 900;
+}
+.first{
+    z-index: 3;
+}
+
+.second {
+    z-index: 2;
+    position: relative;
+    right: 40px;
+    top: -10px;
+    opacity: 0.7;
+}
+
+.third {
+    z-index: 2;
+    position: relative;
+    right: 80px;
+    top: -20px;
+    opacity: 0.4;
+}
+
+.numbers {
+    width: 80px;
+    margin-left: calc(50% - 40px);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}

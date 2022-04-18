@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import InputNumeric from "../components/InputNumeric";
+import InputNumeric from "../components/InputNumeric/InputNumeric";
 
 export default function InformationPage() {
   const [age, setAge] = useState(0);

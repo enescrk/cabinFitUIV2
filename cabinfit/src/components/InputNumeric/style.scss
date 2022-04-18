@@ -1,0 +1,15 @@
+input {
+    border-radius: 30px;
+    padding: 10px;
+    width: 300px;
+   color: #0B67BF;
+   padding-left: 20px;
+
+   input:focus {
+     border: none;
+   }
+}
+::placeholder {
+    padding-left: 20px;
+    color: #0B67BF;
+  }

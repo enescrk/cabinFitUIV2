@@ -7,7 +7,7 @@ import "./style.scss"
 export default function CharacterPage() {
     const [character, setCharacter] = useState({
         gender: 0,
-        characterIndex: 0
+        characterIndex: 1
     });
 
     const [selectedCharacter, setSelectedCharacted] = useState({
@@ -18,6 +18,7 @@ export default function CharacterPage() {
 
     const saveSelectedCharacter = () => {
         localStorage.setItem("character", JSON.stringify(character));
+        openCharacterPage();
     }
 
     const characterList = [
@@ -51,6 +52,10 @@ export default function CharacterPage() {
         let i = selectedCharacter.index == 3 ? 0 : selectedCharacter.index + 1
         setSelectedCharacted(characterList[i])
     }
+
+    function openCharacterPage() {
+        window.location.href = "/age";
+     }
 
     return (
         <div className="characterPage">
@@ -104,7 +109,7 @@ export default function CharacterPage() {
             </div>
 
             <div className="customBtn">
-                <CustomButton text="Devam Edelim" clickedOnBtn={saveSelectedCharacter} disabled={false} />
+                <CustomButton text="Devam Edelim" disabled={!selectedCharacter} clickedOnBtn={saveSelectedCharacter} />
             </div>
 
 

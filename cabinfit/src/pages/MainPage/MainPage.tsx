@@ -2,6 +2,9 @@ import IntroPage from "../IntroPage/IntroPage";
 import "./style.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CharacterPage from "../CharacterPage/CharacterPage";
+import InputAgePage from "../InputAgePage/InputAgePage";
+import InputHeightPage from "../InputHeightPage/InputHeightPage";
+import InputWeightPage from "../InputWeightPage/InputWeightPage";
 export default function MainPage() {
     const openCabinWebSite = () => {
         window.open("https://www.cabin.com.tr/")
@@ -22,6 +25,9 @@ export default function MainPage() {
       <Routes>
         <Route path="/" element={<IntroPage />} />
         <Route path="/character" element={<CharacterPage />} />
+        <Route path="/age" element={<InputAgePage />} />
+        <Route path="/height" element={<InputHeightPage />} />
+        <Route path="/weight" element={<InputWeightPage />} />
         {/* <Route path="/episodes" element={<Episodes />} />
         <Route path="/location" element={<Location />} />
         <Route path="/favorites" element={<Favorites />} />
