@@ -1,0 +1,145 @@
+.characterPage {
+    display: grid;
+    grid-template-rows: 50px 300px 200px 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "title title title title title "
+        ". characterList characterList characterList ."
+        ". subText subText subText ."
+        ". . . . btn"
+    ;
+}
+
+.title {
+    grid-area: title;
+}
+
+
+
+.characterList {
+    display: grid;
+    grid-area: characterList;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 1fr;
+    grid-template-areas:
+        "c1 c2 c3 c4"
+    ;
+
+}
+
+.c-1 {
+    grid-area: c1;
+}
+
+.c-2 {
+    grid-area: c2;
+}
+
+.c-3 {
+    grid-area: c3;
+}
+
+.c-4 {
+    grid-area: c4;
+}
+
+.characterItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "img"
+        "circleBox"
+    ;
+
+    >.characterImage {
+        grid-area: img;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    >.characterSelectCircle {
+        grid-area: circleBox;
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 60%;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+
+.subText {
+    grid-area: subText;
+    margin-top: 15px;
+}
+
+.customBtn {
+    grid-area: btn;
+}
+
+.characterListMobil {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .characterPage {
+        display: grid;
+        grid-template-rows: 5vh 40vh 25vh 10vh;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "characterList"
+            "subText"
+            "btn"
+        ;
+    }
+
+    .characterList {
+        display: none;
+    }
+
+    .characterListMobil {
+        display: grid;
+        grid-area: characterList;
+        grid-template-columns: 1fr;
+        grid-row: 1fr;
+
+    }
+
+    .characterItemMobil {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            ". img ."
+            "prew img next"
+            ". img ."
+        ;
+
+        >.characterImage {
+            grid-area: img;
+            width: 100%;
+        }
+
+        >.characterSelectCircle {
+            grid-area: circleBox;
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 60%;
+            background-color: white;
+            cursor: pointer;
+            margin-top: 45px;
+        }
+    }
+
+    .next {
+        grid-area: next;
+        cursor: pointer;
+    }
+
+    .prew {
+        grid-area: prew;
+        cursor: pointer;
+    }
+}

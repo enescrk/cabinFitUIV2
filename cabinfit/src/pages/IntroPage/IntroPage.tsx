@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink, Route } from "react-router-dom";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import "./style.scss"
 export default function IntroPage() {
 
-    function clickedOnBtn() {
-
+    function openCharacterPage() {
+       window.location.href = "/character";
     }
 
     return (
@@ -22,7 +23,7 @@ export default function IntroPage() {
                 </p>
 
                 <div className="customBtn">
-                    <CustomButton text="Hemen Başlayalım" clickedOnBtn={clickedOnBtn} disabled={false} />
+                    <CustomButton text="Hemen Başlayalım" clickedOnBtn={openCharacterPage} disabled={false} />
                 </div>
 
             </section>

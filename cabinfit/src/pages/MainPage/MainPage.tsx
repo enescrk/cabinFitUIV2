@@ -1,5 +1,7 @@
 import IntroPage from "../IntroPage/IntroPage";
 import "./style.scss"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CharacterPage from "../CharacterPage/CharacterPage";
 export default function MainPage() {
     const openCabinWebSite = () => {
         window.open("https://www.cabin.com.tr/")
@@ -16,7 +18,16 @@ export default function MainPage() {
                     </button>
                 </div>
             </header>
-            <IntroPage></IntroPage>
+            <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<IntroPage />} />
+        <Route path="/character" element={<CharacterPage />} />
+        {/* <Route path="/episodes" element={<Episodes />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/details/:id" element={<CharacterDetails />} /> */}
+      </Routes>
+    </BrowserRouter>
             <footer>
                 <div className="shadow cabinLabel" onClick={openCabinWebSite}>
                     <p className="my-auto">
