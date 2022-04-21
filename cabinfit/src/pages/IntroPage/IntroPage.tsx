@@ -16,7 +16,7 @@ export default function IntroPage() {
                     <span>Bedeni Bulmaya</span> <br />
                     <span className="whiteColor">Hazır Mısın ?</span>
                 </div>
-                <img src="https://www.yatasbedding.com.tr/Themes/Yatas/Content/survey/static/media/home-sleep2.png" alt="intro image" />
+                <img src="https://www.cabin.com.tr/assets/landingImage.svg" alt="intro image" />
 
                 <p>
                     CabinFit ile kendi vücut ölçüleriniz ve tercihlerinize göre size en uygun bedeni bulmak üzeresin. Mağazadaki kabin deneyimini online ortamda CabinFit ile yaşayabilirsin. %95 doğruluk oranı ile birkaç pratik soru ile seni daha iyi tanımak istiyoruz. Hazırsan...

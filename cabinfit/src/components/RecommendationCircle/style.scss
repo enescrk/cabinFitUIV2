@@ -1,8 +1,10 @@
+@import "./../../utils/themes.scss";
+
 .circle{
     width: 250px;
     height: 250px;
     border-radius: 60%;
-    background: #5a8fc1;
+    background: $third;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.7fr 1fr 1fr;
