@@ -1,8 +1,10 @@
+@import "./../../utils/themes.scss";
+
 input {
     border-radius: 30px;
     padding: 10px;
     width: 300px;
-   color: #0B67BF;
+   color: $primary;
    padding-left: 20px;
 
    input:focus {
@@ -11,5 +13,5 @@ input {
 }
 ::placeholder {
     padding-left: 20px;
-    color: #0B67BF;
+    color: $primary;
   }

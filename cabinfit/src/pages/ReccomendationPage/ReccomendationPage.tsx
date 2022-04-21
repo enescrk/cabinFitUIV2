@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import ReccomendationCircle from "../../components/RecommendationCircle/ReccomendationCircle";
 import SubText from "../../components/SubText/SubText";
@@ -5,6 +6,7 @@ import Title from "../../components/Title/Title";
 import "./style.scss"
 
 export default function ReccomendationPage() {
+
     return (
         <div className="reccomendationPage">
             <div className="title">

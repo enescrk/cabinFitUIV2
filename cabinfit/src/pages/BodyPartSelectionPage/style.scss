@@ -1,3 +1,5 @@
+@import "./../../utils/themes.scss";
+
 .imageList{
     display: flex;
     flex-direction: row;
@@ -27,7 +29,7 @@
 }
 
 .imageText{
-    background-color: #6DCCDC;
+    background-color: $secondary;
     color: white;
     padding: 10px;
     border-radius: 8px 3px;
@@ -73,7 +75,7 @@
 }
 
 .imageText{
-    background-color: #6DCCDC;
+    background-color: $secondary;
     color: white;
     padding: 5px;
     border-radius: 4px 1.5px;

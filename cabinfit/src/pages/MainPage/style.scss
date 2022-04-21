@@ -1,3 +1,5 @@
+@import "./../../utils/themes.scss";
+
 header {
     display: flex;
     flex-direction: row;
@@ -24,7 +26,7 @@ header {
 
             >svg:hover {
                 background-color: white;
-                fill: #0B67BF;
+                fill: $primary;
                 border-radius: 60%;
                 animation-name: closeBorder;
                 animation-duration: 2s;
@@ -52,7 +54,7 @@ header {
     border-radius: 0 10px 0 0;
     padding: 10px;
     cursor: pointer;
-    color: #0B67BF;
+    color: $primary;
 }
 
 .cabinLabel:hover {

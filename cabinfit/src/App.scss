@@ -1,3 +1,5 @@
+@import "./utils/themes.scss";
+
 .App {
   text-align: center;
   background-color: transparent;
@@ -12,7 +14,7 @@
 }
 
 .mainPage {
-  background-color: #0B67BF;
+  background-color: $primary;
   grid-area: main;
   position: relative;
 }
@@ -51,7 +53,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: $secondary;
 }
 
 @keyframes App-logo-spin {

@@ -1,3 +1,5 @@
+@import "./../../utils/themes.scss";
+
 section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -11,13 +13,13 @@ section {
 
     >.bigTitle {
         grid-area: bigTitle;
-        border: 5px solid #6DCCDC;
+        border: 5px solid $secondary;
         display: flex;
         flex-direction: column;
         align-content: center;
         border-radius: 10px;
         > span {
-            color: #6DCCDC;
+            color: $secondary;
             font-size: 20px;
             font-weight: 900;
         }
@@ -60,7 +62,7 @@ section {
         
         >.bigTitle {
             grid-area: bigTitle;
-            border: 5px solid #6DCCDC;
+            border: 5px solid $secondary;
             display: flex;
             flex-direction: column;
             align-content: center;
@@ -71,7 +73,7 @@ section {
             padding: 5px;
             align-self: center;
             > span {
-                color: #6DCCDC;
+                color: $secondary;
                 font-size: 14px;
                 font-weight: 900;
             }

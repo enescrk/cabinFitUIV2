@@ -1,5 +1,7 @@
+@import "./../../utils/themes.scss";
+
 h2 {
-    color: #6DCCDC;
+    color: $secondary;
     text-align: center;
     max-width: 80vw;
 }

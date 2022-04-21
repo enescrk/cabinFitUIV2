@@ -1,7 +1,9 @@
+@import "./../../utils/themes.scss";
+
 button {
     background-color: transparent;
     border-radius: 60px;
-    border: 1px solid #61dafb;
+    border: 1px solid $secondary;
     color: #61dafb;
     padding: 10px 25px;
     cursor: pointer;
@@ -9,7 +11,7 @@ button {
 
 button:hover{
     background-color: white;
-    color: #0B67BF;
+    color: $primary;
 }
 
 button:disabled {
