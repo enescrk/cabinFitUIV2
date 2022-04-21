@@ -12,7 +12,7 @@ export default function InputWeightPage() {
     const max = 220;
 
     function openCharacterPage() {
-        window.location.href = "/height";
+        window.location.href = "/bodypart";
      }
 
     function saveSelectedWeight(e:any){
@@ -35,7 +35,7 @@ export default function InputWeightPage() {
                 <SubText text="Vücudun ile kıyafetler arasındaki ilişki her ne kadar ölçülere bağlı olarak değişse de cinsiyet tercihin beden önerisi hesabı yapmamızda ve sana doğru sorular yöneltmemizde bize yardımcı olacaktır." />
 
             </div>
-            <div className="btn">
+            <div className="nextBtn">
                 <CustomButton text="Devam Et" disabled={!(weight > min && weight < max)} clickedOnBtn={saveSelectedWeight}/>
             </div>
 

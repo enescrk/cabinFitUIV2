@@ -4,8 +4,8 @@ section {
     grid-template-rows: 150px 1fr 1fr 1fr;
     grid-template-areas:
         ". . bigTitle bigTitle . ."
-        "img img . text text text"
-        "img img . text text text"
+        ". img img text text ."
+        ". img img text text ."
         ". . . . btn btn"
     ;
 

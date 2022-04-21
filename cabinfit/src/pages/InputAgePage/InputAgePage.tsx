@@ -35,7 +35,7 @@ export default function InputAgePage(props: any) {
                 <SubText text="Yaşın vücut bölgelerindeki değişimi doğrudan etikler. Bununla birlikte seninle aynı yaş grubundaki kişileri tecrübelerine dayanarak sana daha doğru bir öneride bulunabiliriz." />
 
             </div>
-            <div className="btn">
+            <div className="nextBtn">
                 <CustomButton text="Devam Et" disabled={!(age > min && age < max)} clickedOnBtn={saveSelectedAge}/>
             </div>
 

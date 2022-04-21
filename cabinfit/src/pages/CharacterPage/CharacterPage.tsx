@@ -67,25 +67,25 @@ export default function CharacterPage() {
                 <div className="characterItem c-1">
                     <img className="characterImage" src="https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/kiz_mouse_over.gif" alt="" />
 
-                    <div className=" characterSelectCircle mx-auto" style={{ backgroundColor: character.characterIndex == 1 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 1 })}>
+                    <div className=" characterSelectCircle" style={{ backgroundColor: character.characterIndex == 1 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 1 })}>
                     </div>
                 </div>
                 <div className="characterItem c-2">
                     <img className="characterImage" src="https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/oglan_mouse_over.gif" alt="" />
 
-                    <div className=" characterSelectCircle mx-auto" style={{ backgroundColor: character.characterIndex == 2 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 2, characterIndex: 2 })}>
+                    <div className=" characterSelectCircle" style={{ backgroundColor: character.characterIndex == 2 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 2, characterIndex: 2 })}>
                     </div>
                 </div>
                 <div className="characterItem c-3">
                     <img className="characterImage" src="https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/gozluklu_mouse_over.gif" alt="" />
 
-                    <div className=" characterSelectCircle mx-auto" style={{ backgroundColor: character.characterIndex == 3 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 3 })}>
+                    <div className=" characterSelectCircle" style={{ backgroundColor: character.characterIndex == 3 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 3 })}>
                     </div>
                 </div>
                 <div className="characterItem c-4">
                     <img className="characterImage" src="https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/kadin_mouse_over.gif" alt="" />
 
-                    <div className=" characterSelectCircle mx-auto" style={{ backgroundColor: character.characterIndex == 4 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 4 })}>
+                    <div className=" characterSelectCircle" style={{ backgroundColor: character.characterIndex == 4 ? '#6DCCDC' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 4 })}>
                     </div>
                 </div>
             </div>

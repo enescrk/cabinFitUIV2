@@ -62,6 +62,7 @@
         grid-area: circleBox;
         width: 30px !important;
         height: 30px !important;
+        margin-left: calc(50% - 15px);
         border-radius: 60%;
         background-color: white;
         cursor: pointer;

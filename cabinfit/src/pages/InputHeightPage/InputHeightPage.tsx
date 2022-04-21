@@ -35,7 +35,7 @@ export default function InputHeightPage() {
                 <SubText text="Vücudun ile kıyafetler arasındaki ilişki her ne kadar ölçülere bağlı olarak değişse de cinsiyet tercihin beden önerisi hesabı yapmamızda ve sana doğru sorular yöneltmemizde bize yardımcı olacaktır." />
 
             </div>
-            <div className="btn">
+            <div className="nextBtn">
                 <CustomButton text="Devam Et" disabled={!(height > min && height < max)} clickedOnBtn={saveSelectedAge}/>
             </div>
 
