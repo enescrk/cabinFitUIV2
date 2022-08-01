@@ -45,7 +45,6 @@ export default function InputWeightPage() {
         }
         
         cabinService.saveUser(tempModel).then(res => {
-           
             let response = res.data;
             model.id = response.id;
             setUserModel(model);
@@ -72,6 +71,8 @@ export default function InputWeightPage() {
                     default:
                         break;
                 }
+            }else{
+                window.location.href = "/reccomendation";
             }
            
         }).catch(err => {

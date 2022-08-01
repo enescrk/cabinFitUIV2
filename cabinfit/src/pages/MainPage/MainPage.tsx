@@ -21,7 +21,7 @@ export default function MainPage() {
     return (
         <div >
             <header>
-                <img src="https://mudoconcept.az/img/logoPink.png" alt="brand logo" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Ki%C4%9F%C4%B1l%C4%B1_logo.png" alt="brand logo" />
                 <div className="action">
                     <button>Bilgi</button>
                     <button>
