@@ -13,7 +13,7 @@
 .weightMainContent {
     grid-area: main;
     display: grid;
-    grid-column: 30% 20% 20% 30%;
+    grid-template-columns: 30% 20% 20% 30%;
     grid-template-rows: 45vh;
     grid-template-areas:
         ". img input ."
@@ -21,7 +21,7 @@
 
     >img {
         grid-area: img;
-        width: 35%;
+        width: 90%;
 
     }
 
@@ -60,7 +60,7 @@
     .weightMainContent {
         grid-area: main;
         display: grid;
-        grid-column: 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 15vh 25vh;
         grid-template-areas:
             "img"
@@ -70,8 +70,8 @@
 
         >img {
             grid-area: img;
-            height: 100%;
-            width: auto;
+            height: auto;
+            width: 50%;
     
         }
     }

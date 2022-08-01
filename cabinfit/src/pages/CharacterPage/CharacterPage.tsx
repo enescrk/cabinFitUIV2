@@ -1,26 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import SubText from "../../components/SubText/SubText";
 import Title from "../../components/Title/Title";
 import "./style.scss";
 import "./../../utils/themes.scss";
+import { CabinFitContext } from "../../CabinFitContext";
+import { json } from "stream/consumers";
 
 export default function CharacterPage() {
-    const [character, setCharacter] = useState({
-        gender: 0,
-        characterIndex: 1
-    });
-
-    const [selectedCharacter, setSelectedCharacted] = useState({
-        src: "https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/kiz_mouse_over.gif",
-        gender: 1,
-        index: 0
-    })
-
-    const saveSelectedCharacter = () => {
-        localStorage.setItem("character", JSON.stringify(character));
-        openCharacterPage();
-    }
 
     const characterList = [
         {
@@ -35,15 +22,38 @@ export default function CharacterPage() {
         },
         {
             src: "https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/gozluklu_mouse_over.gif",
-            gender: 1,
+            gender: 2,
             index: 2
         },
         {
             src: "https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/kadin_mouse_over.gif",
-            gender: 2,
+            gender: 1,
             index: 3
         },
     ]
+
+    const [userModel, setUserModel] = useContext(CabinFitContext);
+
+    const [character, setCharacter] = useState({
+        gender: 0,
+        characterIndex: 1
+    });
+
+    const [selectedCharacter, setSelectedCharacted] = useState({
+        src: "https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/kiz_mouse_over.gif",
+        gender: 1,
+        index: 0
+    })
+
+    const saveSelectedCharacter = () => {
+        
+        let model = userModel;
+        model.gender = character.gender;
+        setUserModel(model);
+
+        localStorage.setItem("model",JSON.stringify(model));
+        openAgePage();
+    }
 
     function prew() {
         let i = selectedCharacter.index == 0 ? 3 : selectedCharacter.index - 1
@@ -54,9 +64,9 @@ export default function CharacterPage() {
         setSelectedCharacted(characterList[i])
     }
 
-    function openCharacterPage() {
+    function openAgePage() {
         window.location.href = "/age";
-     }
+    }
 
     return (
         <div className="characterPage">
@@ -80,7 +90,7 @@ export default function CharacterPage() {
                 <div className="characterItem c-3">
                     <img className="characterImage" src="https://www.yatasbedding.com.tr/Themes/Yatas/Content/Survey/static/media/gozluklu_mouse_over.gif" alt="" />
 
-                    <div className=" characterSelectCircle" style={{ backgroundColor: character.characterIndex == 3 ? 'black' : '' }} onClick={() => setCharacter({ gender: 1, characterIndex: 3 })}>
+                    <div className=" characterSelectCircle" style={{ backgroundColor: character.characterIndex == 3 ? 'black' : '' }} onClick={() => setCharacter({ gender: 2, characterIndex: 3 })}>
                     </div>
                 </div>
                 <div className="characterItem c-4">

@@ -7,7 +7,13 @@ import InputHeightPage from "../InputHeightPage/InputHeightPage";
 import InputWeightPage from "../InputWeightPage/InputWeightPage";
 import BodyPartSelectionPage from "../BodyPartSelectionPage/BodyPartSelectionPage";
 import ReccomendationPage from "../ReccomendationPage/ReccomendationPage";
+import { cabinService } from "../../services/cabinFitService";
+import { axios } from "../../services/axios";
+import { useEffect, useState } from "react";
+
 export default function MainPage() {
+    const [isAvailable, setIsAvailable] = useState(false);
+
     const openCabinWebSite = () => {
         window.open("https://www.cabin.com.tr/")
     }
@@ -15,7 +21,7 @@ export default function MainPage() {
     return (
         <div >
             <header>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Ki%C4%9F%C4%B1l%C4%B1_logo.png" alt="brand logo" />
+                <img src="https://mudoconcept.az/img/logoPink.png" alt="brand logo" />
                 <div className="action">
                     <button>Bilgi</button>
                     <button>
@@ -26,11 +32,13 @@ export default function MainPage() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<IntroPage />} />
-                    <Route path="/character" element={<CharacterPage />} />ß
+                    <Route path="/character" element={<CharacterPage />} />
                     <Route path="/age" element={<InputAgePage />} />
                     <Route path="/height" element={<InputHeightPage />} />
                     <Route path="/weight" element={<InputWeightPage />} />
-                    <Route path="/bodypart" element={<BodyPartSelectionPage />} />
+                    <Route path="/chest" element={<BodyPartSelectionPage />} />
+                    <Route path="/waist" element={<BodyPartSelectionPage />} />
+                    <Route path="/hip" element={<BodyPartSelectionPage />} />
                     <Route path="/reccomendation" element={<ReccomendationPage />} />
                 </Routes>
             </BrowserRouter>

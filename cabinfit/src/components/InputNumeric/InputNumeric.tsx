@@ -10,7 +10,6 @@ export default function InputNumeric(props: any) {
             setBorder("none");
         }else{
             if (e < props.max && e > props.min) {
-                debugger
                 setBorder("3px solid green");
             }
         }

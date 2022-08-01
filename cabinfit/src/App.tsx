@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage/MainPage';
 import { Provider } from 'react-redux'
 import store from './store'
 import { useEffect } from 'react';
+import { CabinFitProvider } from './CabinFitContext';
 function App() {
 
   useEffect(() => {
@@ -11,7 +12,6 @@ function App() {
     //TODO: Firebase den alınan renk değerleri koyulacak.
     const brandColor = {};
     if (brandColor != {} && false) {
-      debugger
       const root = document.documentElement;
       root.style.setProperty('--primary-color', brandColor ? 'white' : 'red');
       root.style.setProperty('--secondary-color', brandColor ? 'white' : 'black');
@@ -20,14 +20,15 @@ function App() {
 
   });
   return (
-    <Provider store={store}>
+    <CabinFitProvider>
       <div className="App">
         <div className="mainPage shadow rounded">
           <MainPage />
         </div>
 
       </div>
-    </Provider>
+    </CabinFitProvider>
+
   );
 }
 
