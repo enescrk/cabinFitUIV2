@@ -3,16 +3,13 @@ import { axios } from "./axios";
 const apiUrl = "https://cabinfitapi.cabin.com.tr";
 
 const authorization = `Bearer 1a0e12a3-147d-4f5a-bdae-dc588293b91e`;
-var headerBrand = localStorage.getItem("brandId") ? JSON.parse(localStorage.getItem("brandId")) : null;
-var headerUser = localStorage.getItem("User-Id") ? localStorage.getItem("User-Id") : null;
-var headerProduct = localStorage.getItem("productId") ? JSON.parse(localStorage.getItem("productId")) : "";
+const headerBrand = localStorage.getItem("brandId") ? JSON.parse(localStorage.getItem("brandId")) : 2;
+const headerUser = localStorage.getItem("User-Id") ? JSON.parse(localStorage.getItem("User-Id")) : null;
+const headerProduct = localStorage.getItem("productId") ? JSON.parse(localStorage.getItem("productId")) : "";
 
 
 export const cabinService = {
   isProductAvailable(productCode) {
-    if(productCode != 'test'){
-      throw new Error("Ürün bulunamadı.");
-    }
     return axios.get(`${apiUrl}/api/Product/${productCode}/IsAvailable`, {
       headers: {
         "Authorization": authorization,
@@ -60,6 +57,16 @@ export const cabinService = {
         "User-Id": headerUser ?? null,
         "Product-Id": headerProduct,
         "Brand-User-Id": null
+      }
+    });
+  },
+  getFitness() {
+    return axios.get(`${apiUrl}/api/Fitness`, {
+      headers: {
+        "Authorization": authorization,
+        "Brand-Id": headerBrand ?? null,
+        "User-Id": headerUser ?? null,
+        "Product-Id": headerProduct
       }
     });
   },

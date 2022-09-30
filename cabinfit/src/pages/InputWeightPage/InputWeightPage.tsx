@@ -32,7 +32,11 @@ export default function InputWeightPage() {
         model = userModel;
         model.weight = weight;
         localStorage.setItem("model", JSON.stringify(model));
-        saveUser();
+        if(!localStorage.getItem('User-Id')){
+            saveUser();
+        }else{
+            checkRequiredBodyparts();
+        }
     }
 
     function saveUser() {
@@ -46,9 +50,9 @@ export default function InputWeightPage() {
         
         cabinService.saveUser(tempModel).then(res => {
             let response = res.data;
+            localStorage.setItem("User-Id", response?.Id);
             model.id = response.id;
             setUserModel(model);
-            localStorage.setItem("User-Id", response.Id);
             checkRequiredBodyparts();
         }).catch(err => {
         })
